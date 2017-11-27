@@ -131,5 +131,53 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.8" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Cramer"
+        android:textColor="@color/ap_white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/metodoBairRay"
+        app:layout_constraintEnd_toEndOf="@+id/metodoBairRay"
+        app:layout_constraintStart_toStartOf="@+id/metodoBairRay"
+        app:layout_constraintTop_toTopOf="@+id/metodoBairRay" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Bisección"
+        android:textColor="@color/ap_white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/metodoBisecRay"
+        app:layout_constraintEnd_toEndOf="@+id/metodoBisecRay"
+        app:layout_constraintStart_toStartOf="@+id/metodoBisecRay"
+        app:layout_constraintTop_toTopOf="@+id/metodoBisecRay" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Bairstow"
+        android:textColor="@color/ap_white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/metodoCramerRay"
+        app:layout_constraintEnd_toEndOf="@+id/metodoCramerRay"
+        app:layout_constraintStart_toStartOf="@+id/metodoCramerRay"
+        app:layout_constraintTop_toTopOf="@+id/metodoCramerRay" />
+
 
 </android.support.constraint.ConstraintLayout>
