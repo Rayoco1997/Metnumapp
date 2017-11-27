@@ -1,158 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="mx.rrc.metnumapp.MetodoCramerRay"
+    tools:layout_editor_absoluteX="0dp"
+    tools:layout_editor_absoluteY="86dp"
     tools:showIn="@layout/activity_metodo_cramer_ray">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="86dp">
+    <Button
+        android:id="@+id/Calcular"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/PuntosScroll"
+        android:layout_alignEnd="@+id/PuntosScroll"
+        android:layout_alignRight="@+id/PuntosScroll"
+        android:text="Calcular"
+        tools:layout_editor_absoluteX="145dp"
+        tools:layout_editor_absoluteY="140dp" />
 
-        <Button
-            android:id="@+id/Calcular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/Agregar"
-            android:layout_alignBottom="@+id/Agregar"
-            android:layout_centerHorizontal="true"
-            android:text="Calcular"
-            tools:layout_editor_absoluteX="145dp"
-            tools:layout_editor_absoluteY="140dp" />
+    <Button
+        android:id="@+id/Agregar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Faltantes"
+        android:layout_alignStart="@+id/Faltantes"
+        android:layout_below="@+id/Faltantes"
+        android:text="Agregar"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="140dp" />
 
-        <Button
-            android:id="@+id/Agregar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/Faltantes"
-            android:layout_alignStart="@+id/Faltantes"
-            android:layout_below="@+id/Faltantes"
-            android:text="Agregar"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="140dp" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:text="Ingrese los coeficientes separados por comas"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <TextView
+        android:id="@+id/Faltantes"
+        android:layout_width="333dp"
+        android:layout_height="20dp"
+        android:layout_alignEnd="@+id/Valores"
+        android:layout_alignLeft="@+id/Valores"
+        android:layout_alignRight="@+id/Valores"
+        android:layout_alignStart="@+id/Valores"
+        android:layout_below="@+id/Valores"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <EditText
+        android:id="@+id/Valores"
+        android:layout_width="343dp"
+        android:layout_height="44dp"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="13dp"
+        tools:layout_editor_absoluteY="83dp" />
+
+    <Button
+        android:id="@+id/Borrar"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/Calcular"
+        android:layout_alignRight="@+id/Calcular"
+        android:layout_below="@+id/Faltantes"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        android:text="Borrar"
+        tools:layout_editor_absoluteX="280dp"
+        tools:layout_editor_absoluteY="140dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Método de Cramer"
+        android:textSize="14sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/PuntosScroll"
+        android:layout_alignStart="@+id/PuntosScroll"
+        android:layout_below="@+id/PuntosScroll"
+        android:text="Resultado"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="351dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/PuntosScroll"
+        android:layout_alignLeft="@+id/Agregar"
+        android:layout_alignStart="@+id/Agregar"
+        android:text="Coeficientes ingresadas"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="206dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/PuntosScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_centerVertical="true">
 
         <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/textView"
-            android:layout_centerHorizontal="true"
-            android:text="Ingrese los coeficientes separados por comas"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="61dp" />
-
-        <TextView
-            android:id="@+id/Faltantes"
-            android:layout_width="333dp"
-            android:layout_height="20dp"
-            android:layout_alignEnd="@+id/Valores"
-            android:layout_alignLeft="@+id/Valores"
-            android:layout_alignRight="@+id/Valores"
-            android:layout_alignStart="@+id/Valores"
-            android:layout_below="@+id/Valores"
-            tools:layout_editor_absoluteX="24dp"
-            tools:layout_editor_absoluteY="121dp" />
-
-        <EditText
-            android:id="@+id/Valores"
-            android:layout_width="343dp"
-            android:layout_height="44dp"
-            android:layout_below="@+id/textView2"
-            android:layout_centerHorizontal="true"
-            android:ems="10"
-            android:inputType="textPersonName"
-            tools:layout_editor_absoluteX="13dp"
-            tools:layout_editor_absoluteY="83dp" />
-
-        <Button
-            android:id="@+id/Borrar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/Calcular"
-            android:layout_alignBottom="@+id/Calcular"
-            android:layout_alignEnd="@+id/Valores"
-            android:layout_alignRight="@+id/Valores"
-            android:text="Borrar"
-            tools:layout_editor_absoluteX="280dp"
-            tools:layout_editor_absoluteY="140dp" />
-
-        <TextView
-            android:id="@+id/textView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:text="Método de Cramer"
-            android:textSize="30sp"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="16dp" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/Puntos"
+            android:layout_width="345dp"
+            android:layout_height="98dp"
+            android:layout_above="@+id/textView5"
             android:layout_alignLeft="@+id/PuntosScroll"
             android:layout_alignStart="@+id/PuntosScroll"
-            android:layout_below="@+id/PuntosScroll"
-            android:text="Resultado"
-            tools:layout_editor_absoluteX="8dp"
-            tools:layout_editor_absoluteY="351dp" />
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ResultadosScroll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/PuntosScroll"
+        android:layout_alignLeft="@+id/textView5"
+        android:layout_alignRight="@+id/PuntosScroll"
+        android:layout_alignStart="@+id/textView5"
+        android:layout_below="@+id/textView5">
 
         <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@+id/PuntosScroll"
-            android:layout_alignLeft="@+id/Agregar"
-            android:layout_alignStart="@+id/Agregar"
-            android:text="Coeficientes ingresadas"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="206dp" />
+            android:id="@+id/Resultados"
+            android:layout_width="346dp"
+            android:layout_height="124dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="0dp" />
+    </android.support.constraint.ConstraintLayout>
 
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/PuntosScroll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView3"
-            android:layout_alignStart="@+id/textView3"
-            android:layout_centerVertical="true">
+</RelativeLayout>
 
-            <TextView
-                android:id="@+id/Puntos"
-                android:layout_width="345dp"
-                android:layout_height="98dp"
-                android:layout_above="@+id/textView5"
-                android:layout_alignLeft="@+id/PuntosScroll"
-                android:layout_alignStart="@+id/PuntosScroll"
-                app:layout_constraintBottom_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent" />
-        </android.support.constraint.ConstraintLayout>
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/ResultadosScroll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/PuntosScroll"
-            android:layout_alignLeft="@+id/textView5"
-            android:layout_alignRight="@+id/PuntosScroll"
-            android:layout_alignStart="@+id/textView5"
-            android:layout_below="@+id/textView5">
-
-            <TextView
-                android:id="@+id/Resultados"
-                android:layout_width="346dp"
-                android:layout_height="124dp"
-                tools:layout_editor_absoluteX="0dp"
-                tools:layout_editor_absoluteY="0dp" />
-        </android.support.constraint.ConstraintLayout>
-
-    </RelativeLayout>
-
-</android.support.constraint.ConstraintLayout>
