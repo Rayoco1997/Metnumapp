@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Metnumapp.iml" filepath="$PROJECT_DIR$/Metnumapp.iml" />
+      <module fileurl="file://C:\Users\rayoc\AndroidStudioProjects\Metnumapp1\Metnumapp.iml" filepath="C:\Users\rayoc\AndroidStudioProjects\Metnumapp1\Metnumapp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Metnumapp1.iml" filepath="$PROJECT_DIR$/Metnumapp1.iml" />
       <module fileurl="file://C:\Users\rodri\Documents\AppMetNum\Metnumapp\Metnumapp1.iml" filepath="C:\Users\rodri\Documents\AppMetNum\Metnumapp\Metnumapp1.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://C:\Users\rodri\Documents\AppMetNum\Metnumapp\app\app.iml" filepath="C:\Users\rodri\Documents\AppMetNum\Metnumapp\app\app.iml" />

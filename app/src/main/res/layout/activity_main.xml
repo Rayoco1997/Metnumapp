@@ -52,17 +52,18 @@
         app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintVertical_bias="0.5"
         />
+
     <ImageView
+        android:id="@+id/metodoBisecRay"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:src="@drawable/greenbutton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintVertical_bias="0.7"
-        />
+        app:layout_constraintVertical_bias="0.7" />
     <ImageView
         android:layout_width="150dp"
         android:layout_height="50dp"
@@ -114,18 +115,18 @@
         app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintVertical_bias="0.6"
         />
+
     <ImageView
-        android:id="@+id/metodoBisecRay"
+        android:id="@+id/metodoDELCHEMA"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:src="@drawable/bluebutton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
-        app:layout_constraintVertical_bias="0.8"
-        />
+        app:layout_constraintVertical_bias="0.8" />
 
 
 </android.support.constraint.ConstraintLayout>
