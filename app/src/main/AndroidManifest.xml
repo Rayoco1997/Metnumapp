@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"/>
+        <activity android:name=".MainActivity" />
         <activity android:name=".Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +20,14 @@
         <activity
             android:name=".MetodoCramerRay"
             android:label="@string/title_activity_metodo_cramer_ray"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MetodoBisecRay"
+            android:label="@string/title_activity_metodo_bairstow_ray"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Graficas"
+            android:label="@string/title_activity_graficas"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

@@ -2,12 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Contenedor"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="mx.rrc.metnumapp.MainActivity">
 
 
     //FONDO
+
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,18 +18,18 @@
         />
 
     //Izquierda
+
     <ImageView
         android:id="@+id/metodo1rodrigo"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:src="@drawable/greenbutton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintVertical_bias="0.1"
-        />
+        app:layout_constraintVertical_bias="0.1" />
 
     <ImageView
         android:id="@+id/metodo3rodrigo"
@@ -35,17 +37,17 @@
         android:layout_height="50dp"
         android:src="@drawable/redbutton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintVertical_bias="0.3"
-        />
+        app:layout_constraintVertical_bias="0.3" />
 
     <ImageView
         android:id="@+id/metodoBisecRay"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:onClick="intentBisec"
         android:src="@drawable/bluebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
@@ -65,32 +67,32 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.7" />
+
     <ImageView
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:src="@drawable/redbutton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.075"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.075"
-        app:layout_constraintVertical_bias="0.9"
-        />
+        app:layout_constraintVertical_bias="0.9" />
 
 
     //Derecha
+
     <ImageView
         android:id="@+id/metodo2rodrigo"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:src="@drawable/bluebutton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
-        app:layout_constraintVertical_bias="0.2"
-        />
+        app:layout_constraintVertical_bias="0.2" />
 
     <ImageView
         android:id="@+id/metodoBairRay"
@@ -104,18 +106,18 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.4" />
+
     <ImageView
         android:id="@+id/metodoCramerRay"
         android:layout_width="150dp"
         android:layout_height="50dp"
         android:src="@drawable/redbutton"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.925"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.925"
-        app:layout_constraintVertical_bias="0.6"
-        />
+        app:layout_constraintVertical_bias="0.6" />
 
     <ImageView
         android:id="@+id/metodoDELCHEMA"

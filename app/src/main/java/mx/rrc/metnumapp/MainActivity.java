@@ -6,10 +6,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 //Probando el primer commit
     ImageView metodo1rodrigo;
     ImageView metodoCramerRay;
+    public static ArrayList<Number> valoresX = new ArrayList<Number>();
+    public static ArrayList<Number> valoresY = new ArrayList<Number>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,10 @@ public class MainActivity extends AppCompatActivity {
     }
     public void intentCramer(View view){
         Intent intent = new Intent(this, MetodoCramerRay.class);
+        startActivity(intent);
+    }
+    public void intentBisec(View view){
+        Intent intent = new Intent(this, MetodoBisecRay.class);
         startActivity(intent);
     }
 }

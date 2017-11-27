@@ -3,4 +3,6 @@
     <string name="Prueba">hola Mundo</string>
     <string name="title_activity_metodo_cramer_ray">MetodoCramerRayActivity</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_metodo_bairstow_ray">MetodoBairstowRay</string>
+    <string name="title_activity_graficas">Graficas</string>
 </resources>
