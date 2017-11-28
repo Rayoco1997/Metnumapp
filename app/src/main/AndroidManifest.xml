@@ -40,6 +40,10 @@
         <activity
             android:name=".Graficas"
             android:label="@string/title_activity_graficas"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".MetodoBairRay"
+            android:label="@string/title_activity_metodo_bair_ray"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 

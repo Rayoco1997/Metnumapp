@@ -36,6 +36,10 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, MetodoBisecRay.class);
         startActivity(intent);
     }
+    public void intentBair(View view){
+        Intent intent = new Intent(this, MetodoBairRay.class);
+        startActivity(intent);
+    }
 
     public void intentGaussJordan(View view){
         Intent intent = new Intent(this, GaussJordan.class);

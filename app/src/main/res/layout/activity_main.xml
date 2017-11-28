@@ -114,6 +114,7 @@
         android:id="@+id/metodoCramerRay"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:onClick="intentBair"
         android:src="@drawable/redbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.925"

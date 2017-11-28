@@ -12,9 +12,10 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/Aceptar"
-        android:layout_toRightOf="@+id/Aceptar"
+        android:layout_marginTop="17dp"
         android:text="Método de Bisección"
         android:textSize="24sp" />
 
@@ -98,4 +99,24 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/Aceptar"
         android:layout_marginTop="13dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/Resultados"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/bota" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/PuntoFinal"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="43dp"
+        android:src="@drawable/nieve" />
 </RelativeLayout>

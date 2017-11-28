@@ -1,10 +1,12 @@
 package mx.rrc.metnumapp;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -43,6 +45,7 @@ public class MetodoCramerRay extends AppCompatActivity {
         faltantes = findViewById(R.id.Faltantes);
         coeficientes = findViewById(R.id.Puntos);
         resultados = findViewById(R.id.Resultados);
+        final Activity act=this;
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,11 +80,17 @@ public class MetodoCramerRay extends AppCompatActivity {
                     toast = Toast.makeText(getApplicationContext(), "Faltan líneas de coeficientes" , Toast.LENGTH_LONG);
                     toast.show();
                 }
+                hideSoftKeyboard(act);
             }
         });
 
     }
 
+
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager = (InputMethodManager)  activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
+    }
 
     private void leerEntrada(String valores) throws Exception{
         ArrayList<Double> coef = new ArrayList<Double>();

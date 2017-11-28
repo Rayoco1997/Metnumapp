@@ -1,5 +1,6 @@
 package mx.rrc.metnumapp;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +8,7 @@ import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -43,6 +45,7 @@ public class MetodoBisecRay extends AppCompatActivity {
         error = findViewById(R.id.Error);
         resultados = findViewById(R.id.Resultados);
         graficar = findViewById(R.id.Graficar);
+        final Activity act=this;
         upButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,6 +56,7 @@ public class MetodoBisecRay extends AppCompatActivity {
                     toast.show();
                     resultados.setText(res);
                     resultados.setMovementMethod(new ScrollingMovementMethod());
+                    hideSoftKeyboard(act);
                 }
             }
         });
@@ -67,6 +71,10 @@ public class MetodoBisecRay extends AppCompatActivity {
                 }
             }
         });
+    }
+    public static void hideSoftKeyboard(Activity activity) {
+        InputMethodManager inputMethodManager = (InputMethodManager)  activity.getSystemService(Activity.INPUT_METHOD_SERVICE);
+        inputMethodManager.hideSoftInputFromWindow(activity.getCurrentFocus().getWindowToken(), 0);
     }
     private double eval(final String str) {
         return new Object() {
