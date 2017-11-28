@@ -22,6 +22,14 @@
             android:label="GaussJordanRodrigoActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
+            android:name=".GaussSeidel"
+            android:label="GaussSeidelRodrigoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".Determinante"
+            android:label="GaussSeidelRodrigoActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
             android:name=".MetodoCramerRay"
             android:label="@string/title_activity_metodo_cramer_ray"
             android:theme="@style/AppTheme.NoActionBar" />

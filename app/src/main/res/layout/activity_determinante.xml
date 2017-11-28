@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pantalla_determinantes"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
+    android:paddingTop="16dp"
+    tools:context="mx.rrc.metnumapp.Determinante"
+    android:background="@android:color/background_light">
+
+    <TextView
+        android:text="DETERMINANTES"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="normal|bold"
+        android:textSize="24sp"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TxtFilas"
+        android:layout_toEndOf="@+id/BtnCalcular"
+        android:layout_toRightOf="@+id/BtnCalcular"
+        android:text="Columnas"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <Button
+        android:id="@+id/BtnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtMatriz"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="19dp"
+        android:backgroundTint="@color/colorPrimary"
+        android:onClick="BtnCalcular"
+        android:text="CALCULAR"
+        android:textColor="@color/ap_white" />
+
+    <EditText
+        android:id="@+id/TxtMatriz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/imageView9"
+        android:layout_alignRight="@+id/imageView9"
+        android:layout_below="@+id/textView15"
+        android:width="500dp"
+        android:height="100dp"
+        android:background="@color/ap_gray"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="?attr/colorBackgroundFloating" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView13"
+        android:layout_marginTop="49dp"
+        android:text="Ingrese los valores de la matriz:"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:id="@+id/TxtColumnas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView13"
+        android:layout_alignStart="@+id/textView13"
+        android:layout_below="@+id/textView13"
+        android:width="100dp"
+        android:background="@color/ap_gray"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="?attr/colorBackgroundFloating" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_marginTop="12dp"
+        android:layout_toEndOf="@+id/txtResultado"
+        android:layout_toRightOf="@+id/txtResultado"
+        android:text="Filas"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <EditText
+        android:id="@+id/TxtFilas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView8"
+        android:layout_alignStart="@+id/imageView8"
+        android:layout_below="@+id/textView14"
+        android:layout_marginLeft="28dp"
+        android:layout_marginStart="28dp"
+        android:width="100dp"
+        android:background="@color/ap_gray"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="?attr/colorBackgroundFloating" />
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtResultado"
+        android:layout_marginTop="30dp"
+        android:textColor="@android:color/background_dark"
+        android:layout_below="@+id/BtnCalcular"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:scrollbars="horizontal|vertical" />
+
+    <TextView
+        android:text="RESULTADO:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView24"
+        tools:textColor="@android:color/black"
+        android:layout_above="@+id/txtResultado"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/background_dark" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView14"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_toLeftOf="@+id/textView3"
+        android:layout_toStartOf="@+id/textView3"
+        app:srcCompat="@drawable/bells" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_toEndOf="@+id/textView3"
+        android:layout_toRightOf="@+id/textView3"
+        app:srcCompat="@drawable/bells" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtMatriz"
+        android:layout_toEndOf="@+id/textView15"
+        android:layout_toRightOf="@+id/textView15"
+        app:srcCompat="@drawable/elf" />
+</RelativeLayout>

@@ -41,4 +41,12 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, GaussJordan.class);
         startActivity(intent);
     }
+    public void intentGaussSeidel(View view){
+        Intent intent = new Intent(this, GaussSeidel.class);
+        startActivity(intent);
+    }
+    public void determinante(View view){
+        Intent intent = new Intent(this, Determinante.class);
+        startActivity(intent);
+    }
 }

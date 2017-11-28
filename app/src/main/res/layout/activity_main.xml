@@ -11,11 +11,11 @@
     //FONDO
 
     <ImageView
-        android:layout_width="match_parent"
+        android:layout_width="383dp"
         android:layout_height="match_parent"
         android:src="@drawable/xmastree"
 
-        />
+        tools:layout_editor_absoluteX="1dp" />
 
     //Izquierda
 
@@ -36,6 +36,7 @@
         android:id="@+id/metodo3rodrigo"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:onClick="intentGaussSeidel"
         android:src="@drawable/redbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.075"
@@ -87,6 +88,7 @@
         android:id="@+id/metodo2rodrigo"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:onClick="determinante"
         android:src="@drawable/bluebutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.925"
@@ -174,6 +176,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:onClick="intentGaussSeidel"
         android:text="Gauss-Seidel"
         android:textColor="@color/ap_white"
         android:textSize="24sp"

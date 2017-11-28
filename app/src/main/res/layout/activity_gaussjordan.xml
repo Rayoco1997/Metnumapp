@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_gauss_jordan"
     android:layout_width="match_parent"
@@ -23,118 +24,149 @@
         android:layout_centerHorizontal="true" />
 
     <TextView
-        android:text="Ingrese los valores de la matriz (Separe cada fila con un ENTER y cada valor con SPACE): "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/textView12"
-        android:textColor="@android:color/background_dark"
-        android:textStyle="normal|bold"
-        android:textSize="18sp"
-        android:layout_marginTop="12dp"
-        android:layout_below="@+id/TxtColumnas"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <TextView
-        android:text="RESULTADO:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/TxtFilas"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:text="Ingrese los valores de la matriz (use espacios): "
+        android:textAppearance="@style/TextAppearance.AppCompat" />
+
+    <TextView
         android:id="@+id/textView26"
-        tools:textColor="@android:color/black"
-        android:layout_below="@+id/BtnCalcular"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@android:color/background_dark" />
-
-    <TextView
-        android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/txtResultado"
-        android:textColor="@android:color/background_dark"
-        android:layout_below="@+id/textView26"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:scrollbars="horizontal|vertical" />
+        android:layout_below="@+id/BtnCalcular"
+        android:layout_marginTop="71dp"
+        android:text="RESULTADO:"
+        android:textColor="@android:color/background_dark"
+        tools:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txtResultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView26"
+        android:layout_marginTop="11dp"
+        android:layout_toEndOf="@+id/TxtFilas"
+        android:layout_toRightOf="@+id/TxtFilas"
+        android:scrollbars="horizontal|vertical"
+        android:text="TextView"
+        android:textColor="@android:color/background_dark" />
 
     <Button
         android:id="@+id/BtnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/TxtMatriz"
-        android:layout_marginTop="17dp"
-        android:layout_toEndOf="@+id/textView7"
-        android:layout_toRightOf="@+id/textView7"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/colorPrimary"
         android:onClick="BtnCalcular"
-        android:text="CALCULAR" />
+        android:text="CALCULAR"
+        android:textColor="@color/ap_white" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
         android:id="@+id/TxtMatriz"
-        android:background="@android:color/background_light"
-        android:height="80dp"
-        android:width="500dp"
-        android:inputType="textMultiLine"
-        android:textColor="?attr/colorBackgroundFloating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView26"
+        android:layout_alignStart="@+id/textView26"
         android:layout_below="@+id/textView12"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:width="500dp"
+        android:height="80dp"
+        android:background="@color/ap_gray"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:textColor="?attr/colorBackgroundFloating" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
         android:id="@+id/TxtFilas"
-        android:background="@android:color/background_light"
-        android:editable="false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/textView12"
+        android:layout_alignStart="@+id/textView12"
+        android:layout_below="@+id/textView11"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
         android:width="100dp"
-        android:layout_marginTop="17dp"
-        android:textColor="?attr/colorBackgroundFloating"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/TxtColumnas"
-        android:layout_alignStart="@+id/TxtColumnas" />
+        android:background="@color/ap_gray"
+        android:editable="true"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="@color/ap_white" />
 
     <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="number"
-        android:ems="10"
         android:id="@+id/TxtColumnas"
-        android:background="@android:color/background_light"
-        android:editable="false"
-        android:width="100dp"
-        android:textColor="?attr/colorBackgroundFloating"
-        android:layout_below="@+id/TxtFilas"
-        android:layout_toRightOf="@+id/BtnCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView7"
         android:layout_toEndOf="@+id/BtnCalcular"
-        android:layout_marginTop="11dp" />
+        android:layout_toRightOf="@+id/BtnCalcular"
+        android:width="100dp"
+        android:background="@color/ap_gray"
+        android:editable="false"
+        android:ems="10"
+        android:inputType="number"
+        android:textColor="?attr/colorBackgroundFloating" />
 
     <TextView
-        android:text="Columnas:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/textView7"
-        android:textColor="@android:color/background_dark"
-        android:textStyle="normal|bold"
-        android:textSize="18sp"
-        android:layout_above="@+id/textView12"
-        android:layout_alignLeft="@+id/textView11"
-        android:layout_alignStart="@+id/textView11" />
-
-    <TextView
-        android:text="Filas:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView11"
+        android:layout_alignBaseline="@+id/textView11"
+        android:layout_alignBottom="@+id/textView11"
+        android:layout_alignLeft="@+id/TxtColumnas"
+        android:layout_alignStart="@+id/TxtColumnas"
+        android:text="Columnas"
         android:textColor="@android:color/background_dark"
-        android:textStyle="normal|bold"
         android:textSize="18sp"
-        android:layout_alignBaseline="@+id/TxtFilas"
-        android:layout_alignBottom="@+id/TxtFilas"
+        android:textStyle="normal|bold" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/TxtFilas"
+        android:layout_alignStart="@+id/TxtFilas"
+        android:layout_below="@+id/textView2"
+        android:layout_marginLeft="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="19dp"
+        android:text="Filas"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="normal|bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imageView3"
+        android:layout_toEndOf="@+id/textView2"
+        android:layout_toRightOf="@+id/textView2"
+        app:srcCompat="@drawable/bells" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/TxtFilas"
+        android:layout_marginBottom="11dp"
         android:layout_toLeftOf="@+id/textView2"
-        android:layout_toStartOf="@+id/textView2" />
+        android:layout_toStartOf="@+id/textView2"
+        app:srcCompat="@drawable/bells" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imageView2"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView2"
+        android:layout_marginBottom="11dp"
+        app:srcCompat="@drawable/elf" />
 
 </RelativeLayout>
