@@ -2,9 +2,6 @@ package mx.rrc.metnumapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
@@ -36,16 +33,16 @@ public class MetodoBisecRay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_metodo_bisec_ray);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        upButton = (Button) findViewById(R.id.Aceptar);
-        funcion = (EditText) findViewById(R.id.Funcion);
-        puntoInicial = (EditText) findViewById(R.id.PuntoInicial);
-        puntoFinal = (EditText) findViewById(R.id.PuntoFinal);
-        error = (EditText) findViewById(R.id.Error);
-        resultados = (TextView) findViewById(R.id.Resultados);
-        graficar = (Button) findViewById(R.id.Graficar);
+        upButton = findViewById(R.id.Aceptar);
+        funcion = findViewById(R.id.Funcion);
+        puntoInicial = findViewById(R.id.PuntoInicial);
+        puntoFinal = findViewById(R.id.PuntoFinal);
+        error = findViewById(R.id.Error);
+        resultados = findViewById(R.id.Resultados);
+        graficar = findViewById(R.id.Graficar);
         upButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

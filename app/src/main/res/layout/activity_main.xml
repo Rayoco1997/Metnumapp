@@ -23,6 +23,7 @@
         android:id="@+id/metodo1rodrigo"
         android:layout_width="150dp"
         android:layout_height="50dp"
+        android:onClick="intentGaussJordan"
         android:src="@drawable/greenbutton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.075"

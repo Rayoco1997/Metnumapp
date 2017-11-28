@@ -1,9 +1,6 @@
 package mx.rrc.metnumapp;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.method.ScrollingMovementMethod;
@@ -36,16 +33,16 @@ public class MetodoCramerRay extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_metodo_cramer_ray);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ecuaciones = new ArrayList<ArrayList<Double>>();
-        agregar = (Button) findViewById(R.id.Agregar);
-        borrar = (Button) findViewById(R.id.Borrar);
-        calcular = (Button) findViewById(R.id.Calcular);
-        valores = (EditText) findViewById(R.id.Valores);
-        faltantes = (TextView) findViewById(R.id.Faltantes);
-        coeficientes = (TextView) findViewById(R.id.Puntos);
-        resultados = (TextView) findViewById(R.id.Resultados);
+        agregar = findViewById(R.id.Agregar);
+        borrar = findViewById(R.id.Borrar);
+        calcular = findViewById(R.id.Calcular);
+        valores = findViewById(R.id.Valores);
+        faltantes = findViewById(R.id.Faltantes);
+        coeficientes = findViewById(R.id.Puntos);
+        resultados = findViewById(R.id.Resultados);
         agregar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -184,7 +181,7 @@ public class MetodoCramerRay extends AppCompatActivity {
                     }
                 }
             }
-            result += arr[0][i] * Math.pow(-1, (int) i) * determinanteUtil(temp);
+            result += arr[0][i] * Math.pow(-1, i) * determinanteUtil(temp);
         }
         return result;
     }

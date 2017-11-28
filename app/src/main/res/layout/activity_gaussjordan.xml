@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_pantalla_gauss_jordan"
+    android:id="@+id/activity_gauss_jordan"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="16dp"
@@ -58,15 +58,15 @@
         android:scrollbars="horizontal|vertical" />
 
     <Button
-        android:text="CALCULAR"
+        android:id="@+id/BtnCalcular"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="17dp"
-        android:id="@+id/BtnCalcular"
-        android:onClick="BtnCalcular"
         android:layout_below="@+id/TxtMatriz"
+        android:layout_marginTop="17dp"
+        android:layout_toEndOf="@+id/textView7"
         android:layout_toRightOf="@+id/textView7"
-        android:layout_toEndOf="@+id/textView7" />
+        android:onClick="BtnCalcular"
+        android:text="CALCULAR" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -136,4 +136,5 @@
         android:layout_alignBottom="@+id/TxtFilas"
         android:layout_toLeftOf="@+id/textView2"
         android:layout_toStartOf="@+id/textView2" />
+
 </RelativeLayout>

@@ -2,11 +2,8 @@ package mx.rrc.metnumapp;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 
 import com.androidplot.xy.LineAndPointFormatter;
 import com.androidplot.xy.SimpleXYSeries;
@@ -24,10 +21,10 @@ public class Graficas extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_graficas);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        mySimpleXYPlot = (XYPlot) findViewById(R.id.mySimpleXYPlot);
+        mySimpleXYPlot = findViewById(R.id.mySimpleXYPlot);
         crearGrafica();
     }
     public void crearGrafica(){

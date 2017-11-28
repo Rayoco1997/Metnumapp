@@ -1,20 +1,16 @@
 package mx.rrc.metnumapp;
 
-/**
- * Created by rodri on 27/11/2017.
- */
-
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static  mx.rrc.metnumapp.MainActivity.checarMatriz;
-import static  mx.rrc.metnumapp.MainActivity.generarMatriz;
-import static  mx.rrc.metnumapp.MainActivity.imprimirMatriz;
+/**
+ * Created by rodri on 27/11/2017.
+ */
 
 public class GaussJordan extends AppCompatActivity {
     private EditText matrizTexto;
@@ -28,15 +24,54 @@ public class GaussJordan extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_pantalla_gauss_jordan);
+        setContentView(R.layout.activity_gaussjordan);
+
         matrizTexto=(EditText) findViewById(R.id.TxtMatriz);
         filas= (EditText) findViewById(R.id.TxtFilas);
         columnas= (EditText) findViewById(R.id.TxtColumnas);
         resultado= (TextView) findViewById(R.id.txtResultado);
         resultado.setText("");
         resultado.setMovementMethod(new ScrollingMovementMethod());
+
+    }
+    public static double[][] generarMatriz (String entrada, int filas, int columnas){
+        String[] listaRenglones= entrada.split("\n");
+        String[] valoresRenglon;
+        double[][] matriz = new double[filas][columnas];
+
+        for(int fila=0; fila<filas;fila++){
+            String renglon=listaRenglones[fila];
+            valoresRenglon= renglon.split(" ");
+            for(int columna=0; columna<columnas;columna++){
+                String valor=valoresRenglon[columna];
+                matriz[fila][columna]=Double.parseDouble(valor);
+            }
+        }
+        return matriz;
+    }
+    public static boolean checarMatriz(String s){
+        boolean isValid=true;
+        for(int i =0;i<s.length();i++){
+            char c=s.charAt(i);
+            if(!(Character.isDigit(c)||c=='.'||c==' '||c=='\n'||c=='-'))
+                isValid=false;
+        }
+        return isValid;
     }
 
+    public static String imprimirMatriz(double[][] matriz){
+        String resultado= "";
+        for(int fila=0; fila<matriz.length;fila++){
+            for(int columna=0;columna<matriz[0].length;columna++){
+                resultado+= String.format("%.4f",matriz[fila][columna]) +"  ";
+                System.out.print(matriz[fila][columna] + "\t");
+            }
+            System.out.println();
+            resultado+= "\n";
+        }
+        return resultado;
+
+    }
     public void BtnCalcular(View view){
         entradaMatriz= matrizTexto.getText().toString();
         filasMatriz= Integer.parseInt(filas.getText().toString());
@@ -49,7 +84,6 @@ public class GaussJordan extends AppCompatActivity {
 
 
     }
-
     private static double[][] cambioRen(double[][]matrix, int i){
         double[] temp;
         while(matrix[i][i]==0){
@@ -63,7 +97,6 @@ public class GaussJordan extends AppCompatActivity {
         }
         return matrix;
     }
-
     public static double[][] gauss(double[][] matrix){
         double pivote=1;
         double numBajoPivote;
@@ -92,7 +125,6 @@ public class GaussJordan extends AppCompatActivity {
         }
         return matrix;
     }
-
     public static double[][] gaussJordan(double[][] matrix){
         double numArribaPivote=1;
         double pivote=1;
@@ -113,4 +145,5 @@ public class GaussJordan extends AppCompatActivity {
         }
         return matrix;
     }
+
 }

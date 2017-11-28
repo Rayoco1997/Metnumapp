@@ -26,7 +26,7 @@ public class Splash extends Activity{
                 Intent intent = new Intent(Splash.this, MainActivity.class);
                 startActivity(intent);
                 finish();
-            };
+            }
         }, DURACION_SPLASH);
     }
 }
